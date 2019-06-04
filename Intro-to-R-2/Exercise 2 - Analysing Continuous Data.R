@@ -196,10 +196,10 @@ summary(multimod.red)
 # The first command contains two standardised predictors, but no interaction term. The second is identical 
 # but also contains the interaction term.
 
-multimod.main_effects <- lm(social_skill ~ scale(npi) + scale(neo_agreeable) , data = charis)
+multimod.main_effects <- lm(scale(social_skill) ~ scale(npi) + scale(neo_agreeable) , data = charis)
 summary(multimod.main_effects)
 
-multimod.interaction <- lm(social_skill ~ scale(npi) * scale(neo_agreeable) , data = charis)
+multimod.interaction <- lm(scale(social_skill) ~ scale(npi) * scale(neo_agreeable) , data = charis)
 summary(multimod.interaction)
 
 # Note that the ' * ' operation within the lm() function tells the model to include the interaction
